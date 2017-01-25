@@ -2,6 +2,8 @@
     <!-- SettingView -->
     <declare-styleable name="SettingView">
         <attr name="iOSStyle" format="boolean" />
+        <attr name="IsShowTopTitle" format="reference|boolean"/>
+        <attr name="TopTitle" format="reference|string"/>
     </declare-styleable>
     <declare-styleable name="SettingViewItem">
         <attr name="title" format="string" />
