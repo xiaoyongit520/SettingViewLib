@@ -3,6 +3,7 @@ package com.xiaoyongit.settingview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -24,6 +25,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * 设置界面常用的一种View基于github上的项目改进而来
+ * 感谢原作者
+ */
 public class SettingView extends LinearLayout {
 
     private Context mContext;
@@ -46,10 +51,13 @@ public class SettingView extends LinearLayout {
         setOrientation(LinearLayout.VERTICAL);
 
         mTopDivider = new ImageView(context);
-        mTopDivider.setBackgroundResource(R.drawable.divider);
+        mTopDivider.setBackgroundColor(ContextCompat.getColor(context, R.color.setting_view_item_bg_line));
+        //mTopDivider.setBackgroundResource(R.drawable.divider);
 
         mBottomDivider = new ImageView(context);
-        mBottomDivider.setBackgroundResource(R.drawable.divider);
+
+        mBottomDivider.setBackgroundColor(ContextCompat.getColor(context, R.color.setting_view_item_bg_line));
+        //mBottomDivider.setBackgroundResource(R.drawable.divider);
 
         readAttrs(attrs);
     }
@@ -70,7 +78,8 @@ public class SettingView extends LinearLayout {
 
             int size = mItemViews.size();
 
-            LayoutParams dividerLps = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            //顶部和底部线高度
+            LayoutParams dividerLps = new LayoutParams(LayoutParams.MATCH_PARENT, 1);
             // Add Top Divider
             addView(mTopDivider, dividerLps);
             // Add Content
@@ -94,16 +103,18 @@ public class SettingView extends LinearLayout {
     private void addDivider(boolean iOS_Stylable) {
         ImageView divider = new ImageView(mContext);
         divider.setScaleType(ScaleType.FIT_XY);
-        divider.setBackgroundColor(getResources().getColor(R.color.setting_view_item_bg_normal));
-        divider.setImageResource(R.drawable.divider);
+        divider.setBackgroundColor(ContextCompat.getColor(mContext, R.color.setting_view_item_bg_line));
+        //divider.setImageResource(R.drawable.divider);
 
-        LayoutParams lps = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        LayoutParams lps = new LayoutParams(LayoutParams.MATCH_PARENT, 1);
         lps.gravity = Gravity.RIGHT;
+
 
         if (iOS_Stylable) {
             int paddingLeft = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.setting_view_min_height), getResources().getDisplayMetrics())
                     + (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.setting_view_lr_padding), getResources().getDisplayMetrics());
-            divider.setPadding(paddingLeft, 0, 0, 0);
+            lps.leftMargin = paddingLeft;
+            //divider.setPadding(paddingLeft, 0, 0, 0);
         }
 
         addView(divider, lps);
@@ -133,7 +144,7 @@ public class SettingView extends LinearLayout {
                 @Override
                 public void onClick(View v) {
                     if (null != mItemSwitchListener) {
-                        switchItemView.getmSwitch().setChecked(!switchItemView.getIsChecked());
+                        switchItemView.getSwitchButton().setChecked(!switchItemView.getIsChecked());
                         //mItemClickListener.onItemClick(index);
                     }
                 }

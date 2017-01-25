@@ -68,7 +68,7 @@ public class BasicItemViewV extends FrameLayout {
 				if (null != drawable) {
 					mArrow.setImageDrawable(drawable);
 				} else {
-					mArrow.setImageResource(R.drawable.setting_view_arrow);
+					mArrow.setImageResource(R.drawable.setting_view_arrow_01);
 				}
 			}
 
@@ -165,7 +165,7 @@ public class BasicItemViewV extends FrameLayout {
 			if (null != data.getArrow()) {
 				mArrow.setImageDrawable(data.getArrow());
 			} else {
-				mArrow.setImageResource(R.drawable.setting_view_arrow);
+				mArrow.setImageResource(R.drawable.setting_view_arrow_01);
 			}
 
 			if (null != data.getBackground()) {

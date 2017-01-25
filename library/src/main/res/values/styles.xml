@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <style name="SettingViewContainer">
         <item name="android:layout_width">match_parent</item>
@@ -25,7 +27,7 @@
     </style>
 
     <style name="SettingViewArrow" parent="@style/SettingViewRight">
-        <item name="android:src">@drawable/setting_view_arrow</item>
+        <item name="android:src">@drawable/setting_view_arrow_01</item>
     </style>
 
     <style name="SettingViewCheck" parent="@style/SettingViewRight">

@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.xiaoyongit.settingview.R;
 import com.xiaoyongit.settingview.entity.SettingModel;
+import com.xiaoyongit.settingview.widget.SwitchButton;
 
 public class SwitchItemView extends FrameLayout {
 
@@ -35,13 +36,11 @@ public class SwitchItemView extends FrameLayout {
 
 	public SwitchItemView(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 		init(context);
 	}
 
 	public SwitchItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
 		init(context);
 		readAttrs(context, attrs);
 	}
@@ -57,12 +56,9 @@ public class SwitchItemView extends FrameLayout {
 		mItemViewContainer = (LinearLayout) mItemView.findViewById(R.id.setting_view_switch_item_container);
 
 		mItemViewContainer.setClickable(false);
-
-		mSwitch.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
+		mSwitch.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
 			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				// TODO Auto-generated method stub
+			public void onCheckedChanged(SwitchButton view, boolean isChecked) {
 				if (null != mChangedListener) {
 					mChangedListener.onSwitchItemChanged(isChecked);
 				}
@@ -173,7 +169,7 @@ public class SwitchItemView extends FrameLayout {
 		return mTitle;
 	}
 
-	public SwitchButton getmSwitch() {
+	public SwitchButton getSwitchButton() {
 		return mSwitch;
 	}
 

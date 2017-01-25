@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/setting_view_switch_item_container"
-    style="@style/SettingViewContainer" >
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/setting_view_switch_item_container"
+              style="@style/SettingViewContainer">
 
     <ImageView
         android:id="@+id/setting_view_switch_item_icon"
@@ -10,9 +11,15 @@
     <TextView
         android:id="@+id/setting_view_switch_item_title"
         style="@style/SettingViewTitleH" />
-
-    <com.xiaoyongit.settingview.item.SwitchButton
+    <com.xiaoyongit.settingview.widget.SwitchButton
         android:id="@+id/setting_view_switch_item_switch"
-        style="@style/SettingViewSwitch" />
+        style="@style/SettingViewSwitch"
+        app:sb_show_indicator="false"
+        app:sb_checked="true"
+        />
+
+<!--    <com.xiaoyongit.settingview.item.SwitchButton
+        android:id="@+id/setting_view_switch_item_switch"
+        style="@style/SettingViewSwitch" />-->
 
 </LinearLayout>

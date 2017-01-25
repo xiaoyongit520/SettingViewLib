@@ -18,7 +18,6 @@ import com.xiaoyongit.settingview.R;
 import com.xiaoyongit.settingview.entity.SettingModel;
 
 public class BasicItemViewH extends FrameLayout {
-
 	private LayoutInflater mInflater = null;
 
 	private LinearLayout mItemViewContainer = null;
@@ -77,7 +76,7 @@ public class BasicItemViewH extends FrameLayout {
 				if (null != drawable) {
 					mArrow.setImageDrawable(drawable);
 				} else {
-					mArrow.setImageResource(R.drawable.setting_view_arrow);
+					mArrow.setImageResource(R.drawable.setting_view_arrow_01);
 				}
 			}
 
@@ -179,7 +178,7 @@ public class BasicItemViewH extends FrameLayout {
 			if (null != data.getArrow()) {
 				mArrow.setImageDrawable(data.getArrow());
 			} else {
-				mArrow.setImageResource(R.drawable.setting_view_arrow);
+				mArrow.setImageResource(R.drawable.setting_view_arrow_01);
 			}
 
 			if (null != data.getBackground()) {

@@ -67,7 +67,7 @@ public class ImageItemView extends FrameLayout {
 				if (null != drawable) {
 					mArrow.setImageDrawable(drawable);
 				} else {
-					mArrow.setImageResource(R.drawable.setting_view_arrow);
+					mArrow.setImageResource(R.drawable.setting_view_arrow_01);
 				}
 			}
 
