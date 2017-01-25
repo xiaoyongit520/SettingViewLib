@@ -11,15 +11,11 @@
     <TextView
         android:id="@+id/setting_view_switch_item_title"
         style="@style/SettingViewTitleH" />
+
     <com.xiaoyongit.settingview.widget.SwitchButton
         android:id="@+id/setting_view_switch_item_switch"
         style="@style/SettingViewSwitch"
         app:sb_show_indicator="false"
         app:sb_checked="true"
         />
-
-<!--    <com.xiaoyongit.settingview.item.SwitchButton
-        android:id="@+id/setting_view_switch_item_switch"
-        style="@style/SettingViewSwitch" />-->
-
 </LinearLayout>
