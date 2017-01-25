@@ -27,14 +27,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
-                app:iOSStyle="true" />
+                app:iOSStyle="false"
+                app:IsShowTopTitle="true"
+                app:TopTitle="这是一个标题党"
+                />
 
             <com.xiaoyongit.settingview.SettingView
                 android:id="@+id/ios_style_setting_view_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                app:iOSStyle="true" />
+                app:iOSStyle="true"
+                app:IsShowTopTitle="true"
+                app:TopTitle="这是一个标题党"
+                />
         </LinearLayout>
 
     </ScrollView>

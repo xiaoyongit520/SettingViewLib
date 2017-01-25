@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(mContext, "第" + index + "项被点击", Toast.LENGTH_SHORT).show();
                 if (index == 4) {
-                    mSettingView1.modifySubTitle("中国联通", index);
+                    mSettingView1.setItemSubTitle("中国联通", index);
                 } else if (index == 2) {
-                    mSettingView1.modifySubTitle("关闭", index);
+                    mSettingView1.setItemSubTitle("关闭", index);
                 }
             }
         });
